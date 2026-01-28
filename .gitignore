@@ -10,6 +10,14 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+target/
+.env
+.DS_Store
+*.log
+.classpath
+.project
+.settings/
+
 # Package Files #
 *.jar
 *.war
