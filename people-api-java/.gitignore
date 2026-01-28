@@ -1,7 +1,0 @@
-target/
-.env
-.DS_Store
-*.log
-.classpath
-.project
-.settings/
