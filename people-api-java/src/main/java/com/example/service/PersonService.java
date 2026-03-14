@@ -34,4 +34,12 @@ public class PersonService {
     public void deletePersonById(Long id) {
         personRepository.deleteById(id);
     }
+
+    public List<Long> getAllPersonIds() {
+    return personRepository.findAll()
+            .stream()
+            .map(Person::getId)
+            .toList();
+}
+
 }

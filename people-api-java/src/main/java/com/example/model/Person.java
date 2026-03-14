@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.List;
 
 @Entity
 @Table(name = "\"People\"")
@@ -25,4 +27,8 @@ public class Person {
     
     @Column(name = "\"Phone\"")
     private String phone;
+
+    @OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
+    @JsonManagedReference
+    private List<AddressHistory> addressHistory;
 }
